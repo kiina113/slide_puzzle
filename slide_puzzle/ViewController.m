@@ -306,8 +306,11 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
         CGFloat y = (i / kNumberOfColumns) * height;
         CGRect rect = CGRectMake(x, y, width, height);
         
-        //画像を切り出す
-        UIImage *croppedImage = [image croppedImageInRect:rect];
+        //画像を切り出す(クラス内に書くパターン)
+        //UIImage *croppedImage = [self cutImage:image withRect:rect];
+        
+        //Croppingクラスを使ったパターン
+        UIImage *croppedImage = [(Cropping *)image croppedImageInRect:rect];
         
         //分割後の画像を設定する為のビューを取得
         UIImageView *pieceView = self.pieceViews[i];
@@ -331,5 +334,16 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     //UIImagePickerControllerを閉じる
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
+
+/* クラス内に書くパターン
+- (UIImage *)cutImage:(UIImage *)image withRect:(CGRect)rect {
+    CGImageRef imageRef = CGImageCreateWithImageInRect(image.CGImage,rect);
+    UIImage *croppedImage = [UIImage imageWithCGImage:imageRef];
+    CGImageRelease(imageRef);
+    
+    return croppedImage;
+}
+ */
+
 
 @end
