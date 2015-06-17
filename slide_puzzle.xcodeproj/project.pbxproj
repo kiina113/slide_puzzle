@@ -14,6 +14,7 @@
 		3E5C2ACF1B306E60001834D7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E5C2ACE1B306E60001834D7 /* Images.xcassets */; };
 		3E5C2AD21B306E60001834D7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E5C2AD01B306E60001834D7 /* LaunchScreen.xib */; };
 		3E5C2ADE1B306E60001834D7 /* slide_puzzleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5C2ADD1B306E60001834D7 /* slide_puzzleTests.m */; };
+		3E5C2AEC1B30FBB5001834D7 /* Cropping.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5C2AEB1B30FBB5001834D7 /* Cropping.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		3E5C2AD71B306E60001834D7 /* slide_puzzleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = slide_puzzleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E5C2ADC1B306E60001834D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E5C2ADD1B306E60001834D7 /* slide_puzzleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = slide_puzzleTests.m; sourceTree = "<group>"; };
+		3E5C2AEA1B30FBB5001834D7 /* Cropping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cropping.h; sourceTree = "<group>"; };
+		3E5C2AEB1B30FBB5001834D7 /* Cropping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cropping.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				3E5C2AC61B306E60001834D7 /* AppDelegate.m */,
 				3E5C2AC81B306E60001834D7 /* ViewController.h */,
 				3E5C2AC91B306E60001834D7 /* ViewController.m */,
+				3E5C2AEA1B30FBB5001834D7 /* Cropping.h */,
+				3E5C2AEB1B30FBB5001834D7 /* Cropping.m */,
 				3E5C2ACB1B306E60001834D7 /* Main.storyboard */,
 				3E5C2ACE1B306E60001834D7 /* Images.xcassets */,
 				3E5C2AD01B306E60001834D7 /* LaunchScreen.xib */,
@@ -222,6 +227,7 @@
 				3E5C2ACA1B306E60001834D7 /* ViewController.m in Sources */,
 				3E5C2AC71B306E60001834D7 /* AppDelegate.m in Sources */,
 				3E5C2AC41B306E60001834D7 /* main.m in Sources */,
+				3E5C2AEC1B30FBB5001834D7 /* Cropping.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +349,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kinari Nishiyama (F3GGWE2JZG)";
 				INFOPLIST_FILE = slide_puzzle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -353,6 +360,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kinari Nishiyama (F3GGWE2JZG)";
 				INFOPLIST_FILE = slide_puzzle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -412,6 +420,7 @@
 				3E5C2AE31B306E60001834D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3E5C2AE41B306E60001834D7 /* Build configuration list for PBXNativeTarget "slide_puzzleTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +429,7 @@
 				3E5C2AE61B306E60001834D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
